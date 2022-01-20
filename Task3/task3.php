@@ -48,6 +48,10 @@
   $rowcount = $stmt->rowcount();
   if($rowcount < 1) {
     header('HTTP/1.0 404 Not Found');
+  } else {
+    foreach($stmt AS $row) {
+      echo $row['id'] . " " . $row['short_description'] . " " . $row['article'];
+    }
   }
 
 <!-- End of Sample  Code -->
