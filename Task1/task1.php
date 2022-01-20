@@ -1,9 +1,13 @@
 <?php
-$scores = array(
-  "John Doe" => 94,
-  "Peter Pan" => 83,
-  "James Bond" => 74
-);
+Class Task1 {
+  private $scores = array();
 
-echo json_encode($marks);
+  public function __construct(){
+    $this->scores = array();
+  }
+
+  public function returnScores(){
+    return json_encode($this->scores);
+  }
+}
 ?>
