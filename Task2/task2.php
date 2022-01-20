@@ -65,7 +65,6 @@ class ProductInformation
 ?>
 
 <!-- Errors -->
-1) Line 54: Should be $this->productSkus AS $sku.
-Reason: No property names productSkus.
-
+1) Line 54: This should be ($this->productSku as $sku).
+Reason: No property named productSkus.
 <!-- Errors -->
