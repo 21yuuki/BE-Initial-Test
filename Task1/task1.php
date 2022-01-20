@@ -1,13 +1,17 @@
 <?php
 Class Task1 {
-  private $scores = array();
-
-  public function __construct(){
-    $this->scores = array();
-  }
-
-  public function returnScores(){
-    return json_encode($this->scores);
+  public function returnScores($data, $pattern=" "){
+    if(strpos($data, " ")){
+      return explode($pattern, $data);
+    }else{
+      return str_split($data);
+    }
   }
 }
+
+$task = new Task1();
+$data = 123;
+// $data = "Asadasok akokdo";
+$result = $task->returnScores($data);
+print_r($result);
 ?>
