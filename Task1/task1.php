@@ -1,6 +1,6 @@
 <?php
 Class Task1 {
-  public function returnScores($data, $pattern=" "){
+  public function returnArray($data, $pattern=" "){
     if(strpos($data, " ")){
       return explode($pattern, $data);
     }else{
@@ -12,6 +12,6 @@ Class Task1 {
 $task = new Task1();
 $data = 123;
 // $data = "Asadasok akokdo";
-$result = $task->returnScores($data);
+$result = $task->returnArray($data);
 print_r($result);
 ?>
